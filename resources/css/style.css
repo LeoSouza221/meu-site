@@ -1,0 +1,113 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Shojumaru', cursive;
+}
+/*------------------------------------*/
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 4fr 0.5fr;
+    grid-gap: 5px;
+    grid-template-areas: 
+      "header header header"
+      "left-side content right-side"
+      "footer footer footer";
+}
+/*------------------------------------*/
+
+.header {
+    display: flex;
+    text-align: center;
+    grid-area: header;
+    background: cyan;
+}
+
+.toolbar {
+    height: 50px;
+    position: fixed;
+    width: 100vw;
+    background: magenta;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.toolbar-items {
+    height: 100%;
+    margin-right: 10px;
+}
+
+.toolbar-items ul {
+    list-style-type: none;
+}
+
+.toolbar-items li {
+    display: inline;
+    padding: 10px 20px;
+}
+
+.toolbar-items li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.toolbar-items li:hover {
+    display: inline;
+    background: #fff;
+    cursor: pointer;
+}
+/*------------------------------------*/
+
+.content {
+    display: flex;
+    text-align: center;
+    grid-area: content;
+    background: orange;
+}
+
+.my-apresentation {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+}
+
+#apresentation {
+    height: 100%;
+    width: 100%;  
+}
+
+#knowledge {
+    height: 100%;
+    width: 100%;
+}
+
+#projects {
+    height: 100%;
+    width: 100%;
+}
+
+/*------------------------------------*/
+
+.left-side {
+    display: flex;
+    text-align: center;
+    grid-area: left-side;
+    background: red;
+}
+
+.right-side {
+    display: flex;
+    text-align: center;
+    grid-area: right-side;
+    background: green;
+}
+
+.footer {
+    display: flex;
+    text-align: center;
+    grid-area: footer;
+    background: yellow;
+
+}
