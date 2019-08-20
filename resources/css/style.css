@@ -43,19 +43,29 @@ body {
 
 /*------------------------------------*/
 
-.content {
-    display: flex;
-    grid-area: content;
-    border: 20px solid black;
-    background: rgb(45, 243, 243);
+main {
+    height: 100%;
+    width: 100%;
+    background: black;
     margin: 1px;
     border-radius: 5px;
     color: white;
+    grid-area: content;
+}
+
+.content {
+    display: flex;
+    background: cyan;
+    margin: 30px;
+    height: calc(100% - 60px);
+    width: calc(100% - 60px);
+    justify-content: center;
+    align-items: center;
 }
 
 .my-apresentation {
+    width: 50%;
     height: 100%;
-    width: 100%;
     overflow: scroll;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -65,15 +75,15 @@ body {
     scroll-behavior: smooth;
 }
 
-.toolbar {
+.menu {
     height: 100%;
-    width: 100%;
+    width: 50%;
 }
 
-.toolbar-items {
+.menu-items {
     display: flex;
     height: 100%;
-    width: 100%;
+    width: calc(100% - 20px);
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -86,21 +96,21 @@ ul {
     display: block;
 }
 
-.toolbar-items li {
+.menu-items li {
     text-align: start;
     padding: 10px;
 }
 
-/* .toolbar-items li::before {
+/* .menu-items li::before {
 
 } */
 
-.toolbar-items li a {
+.menu-items li a {
     text-decoration: none;
     color: white;
 }
 
-.toolbar-items li:hover {
+.menu-items li:hover {
     cursor: pointer;
     animation: menu 1.5s infinite reverse;
 }
@@ -114,7 +124,7 @@ ul {
     }
 }
 
-.toolbar-items li a:hover {
+.menu-items li a:hover {
     color: white;
 }
 
