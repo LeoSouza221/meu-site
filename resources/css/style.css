@@ -28,47 +28,65 @@ body {
     background: rgb(140, 32, 202);
 }
 
-.avatar {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    bottom: 0;
-    right: 5%;
-    border-radius: 50%;
-    border: 5px solid red;
-    background-image: url(https://www.gravatar.com/avatar/bbbd4d370977e2098e8349bfd0d7aa06);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 /*------------------------------------*/
 
 main {
-    height: 100%;
-    width: 100%;
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
     background: black;
-    margin: 1px;
+    margin: 2px;
     border-radius: 5px;
     color: white;
     grid-area: content;
 }
 
 .content {
-    display: flex;
     background: cyan;
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr;
+    grid-template-rows: 15% 85%;
+    grid-template-areas: 
+      "menu top"
+      "menu description";
     margin: 30px;
     height: calc(100% - 60px);
     width: calc(100% - 60px);
-    justify-content: center;
-    align-items: center;
+}
+
+.top-content {
+    width: 100%;
+    grid-area: top;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-amount {
+    margin-top: 5px;
+}
+
+.language-selection {
+    margin: 5px;
+
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    border: 5px solid red;
+    background-image: url(https://www.gravatar.com/avatar/bbbd4d370977e2098e8349bfd0d7aa06);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .my-apresentation {
-    width: 50%;
-    height: 100%;
+    grid-area: description;
     overflow: scroll;
     overflow-x: hidden;
     overflow-y: hidden;
+    height: 100%;
+    width: 100%;
 }
 
 .slides {
@@ -76,8 +94,10 @@ main {
 }
 
 .menu {
+    background: black;
+    grid-area: menu;
     height: 100%;
-    width: 50%;
+    width: 100%;
 }
 
 .menu-items {
@@ -101,10 +121,6 @@ ul {
     padding: 10px;
 }
 
-/* .menu-items li::before {
-
-} */
-
 .menu-items li a {
     text-decoration: none;
     color: white;
@@ -115,9 +131,13 @@ ul {
     animation: menu 1.5s infinite reverse;
 }
 
+.menu-items li:hover::before {
+    list-style-type: disc;
+}
+
 @keyframes menu {
     to {
-        background: black ;
+        background: white ;
     }
     from {
         background: none;
@@ -125,8 +145,9 @@ ul {
 }
 
 .menu-items li a:hover {
-    color: white;
+    color: black;
 }
+/*------------------------------------*/
 
 #apresentation {
     height: 100%;
@@ -134,16 +155,107 @@ ul {
     position: relative;
 }
 
+#apresentation h1 {
+    margin: 5px;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    top: 0;
+}
+
+.apresentation-card {
+    margin: 5px;
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    bottom: 0;
+}
+
+.apresentation-text {
+    position: relative;
+    margin: 0 20px;
+    background: rgb(0, 0, 0, 0.8);
+    padding: 5px;
+    border-radius: 10px;
+}
+.apresentation-text:before {
+    content: "";
+    position: absolute;
+    right: 15%;
+    bottom: -28%;
+    width: 0;
+    height: 0;
+    border-top: 26px solid rgb(0, 0, 0, 0.8);
+    border-right: 13px solid transparent;
+    border-left: 13px solid transparent;
+  }
+/*------------------------------------*/
+
+
 #knowledge {
     height: 100%;
     width: 100%;
     position: relative;
 }
 
+#knowledge h1 {
+    margin: 5px;
+    position: absolute;
+    height: 20%;
+    width: 100%;
+    top: 0;
+}
+
+#knowledge p {
+    margin: 5px;
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    bottom: 0;
+}
+
 #projects {
     height: 100%;
     width: 100%;
     position: relative;
+}
+
+#projects h1 {
+    margin: 5px;
+    position: absolute;
+    height: 20%;
+    width: 100%;
+    top: 0;
+}
+
+#projects p {
+    margin: 5px;
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    bottom: 0;
+}
+
+#contacts {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#contacts h1 {
+    margin: 5px;
+    position: absolute;
+    height: 20%;
+    width: 100%;
+    top: 0;
+}
+
+#contacts p {
+    margin: 5px;
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    bottom: 0;
 }
 
 /*------------------------------------*/
