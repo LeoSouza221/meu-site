@@ -10,6 +10,9 @@ body {
     height: 100vh;
     width: 100vw;
     display: grid;
+    background: url("../images/fundo.png");
+    background-size: cover;
+    background-position: center;
     grid-template-columns: 0.75fr 3.5fr 0.75fr;
     grid-template-rows: 1fr 3fr 1fr;
     grid-template-areas: 
@@ -19,13 +22,29 @@ body {
 }
 /*------------------------------------*/
 
+.light {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgb(103, 233, 103);
+    box-shadow: 0 0 5px white,
+        0 0 7px white,
+        0 0 8px rgb(103, 233, 103),
+        0 0 15px rgb(103, 233, 103),
+        0 0 20px rgb(103, 233, 103);
+    top: 50px;
+    left: 90%;
+}
+
+/*------------------------------------*/
+
 .header {
     display: flex;
     text-align: center;
     grid-area: header;
     width: 100%;
     position: relative;
-    background: rgb(140, 32, 202);
 }
 
 /*------------------------------------*/
@@ -35,7 +54,7 @@ main {
     width: calc(100% - 2px);
     background: black;
     margin: 2px;
-    border-radius: 5px;
+    border-radius: 8%;
     color: white;
     grid-area: content;
 }
@@ -94,10 +113,11 @@ main {
 }
 
 .menu {
-    background: black;
+    background: yellow;
     grid-area: menu;
     height: 100%;
     width: 100%;
+    
 }
 
 .menu-items {
@@ -118,12 +138,12 @@ ul {
 
 .menu-items li {
     text-align: start;
-    padding: 10px;
+    padding: 8px;
 }
 
 .menu-items li a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .menu-items li:hover {
@@ -131,21 +151,20 @@ ul {
     animation: menu 1.5s infinite reverse;
 }
 
-.menu-items li:hover::before {
-    list-style-type: disc;
-}
-
 @keyframes menu {
     to {
-        background: white ;
+        background: black;
+        border-radius: 5px;
+        list-style: disc;
     }
     from {
         background: none;
+        border-radius: 5px;
     }
 }
 
 .menu-items li a:hover {
-    color: black;
+    color: white;
 }
 /*------------------------------------*/
 
@@ -206,12 +225,16 @@ ul {
     top: 0;
 }
 
-#knowledge p {
-    margin: 5px;
-    position: absolute;
-    height: 80%;
-    width: 100%;
-    bottom: 0;
+.knowledge-bookcase {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.knowledge-bookcase-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #projects {
@@ -271,19 +294,22 @@ button {
     justify-content: center;
     align-items: center;
     grid-area: left-side;
-    background: rgb(140, 32, 202);
 }
 
 .left-buttons {
-    width: 100%;
+    width: 80%;
     height: 160px;
     position: relative;
+    background: rgb(0, 0, 0, 0.8);
+    border-radius: 50%;
+    border: 3px solid black;
+    box-shadow: inset 0 0 7px #acabab;
 }
 
 .left-button {
     height: 40px;
     width: 40px;
-    background: black;
+    background: rgb(0, 0, 0, 0.8);
     border-radius: 15%;
     color: white;
     /* border: 5px solid; */
@@ -291,7 +317,7 @@ button {
 
 .left-button1 {
     position: absolute;
-    top: 0;
+    top: 10px;
     left: calc(50% - 20px);
 }
 
@@ -303,7 +329,7 @@ button {
 
 .left-button3 {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: calc(50% - 20px);
 }
 
@@ -320,7 +346,6 @@ button {
     text-align: center;
     justify-content: center;
     align-items: center;
-    background: rgb(140, 32, 202);
 }
 
 .right-buttons {
@@ -329,26 +354,40 @@ button {
     position: relative;
 }
 
+.button-background {
+    position: absolute;
+    height: 35%;
+    width: 90%;
+    background: rgb(0, 0, 0, 0.8);
+    border-radius: 40%;
+    border: 3px solid black;
+    box-shadow: inset 0 0 7px #acabab;
+    top: 30%;
+    transform: rotate(328deg);
+    left: 6%;
+}
+
 .right-button {
     border-radius: 50%;
+    /* box-shadow: 5px 5px 10px black; */
     height: 40px;
     width: 40px;
-    background: black;
     color: white;
     /* border: 5px solid; */
-    border-color: black, black, white;
  }
 
 .right-button1 {
+    background: red;
     position: absolute;
     top: 80px;
     left: 25%;
 }
 
 .right-button2 {
+    background: rgb(207, 207, 66);
     position: absolute;
-    top: 40px;
-    right: 15px;
+    top: 30px;
+    right: 35px;
 }
 /*------------------------------------*/
 
@@ -356,6 +395,5 @@ button {
     display: flex;
     text-align: center;
     grid-area: footer;
-    background: rgb(140, 32, 202);
 }
 /*------------------------------------*/
