@@ -5,6 +5,10 @@ body {
     font-size: 20px;
     text-transform: uppercase;
 }
+
+a {
+    color: inherit;
+}
 /*------------------------------------*/
 .container {
     height: 100vh;
@@ -133,6 +137,7 @@ main {
 
 ul {
     list-style-type: none;
+    color: black;
     display: block;
 }
 
@@ -143,29 +148,27 @@ ul {
 
 .menu-items li a {
     text-decoration: none;
-    color: black;
 }
 
-.menu-items li:hover {
+.selected-menu-item {
     cursor: pointer;
     animation: menu 1.5s infinite reverse;
+    list-style: disc;
 }
 
 @keyframes menu {
     to {
-        background: black;
+        color: white !important;
+        background: rgb(175, 172, 172);
         border-radius: 5px;
-        list-style: disc;
     }
     from {
+        color: black;
         background: none;
         border-radius: 5px;
     }
 }
 
-.menu-items li a:hover {
-    color: white;
-}
 /*------------------------------------*/
 
 #apresentation {

@@ -15,11 +15,11 @@
         </header>
         <div class="left-side">
             <div class="left-buttons ">
-                <button class="left-button left-button1">
+                <button class="left-button left-button1" onclick="markSelectedItem(null, 'DOWN')">
                 </button>
                 <button class="left-button left-button2">
                 </button>
-                <button class="left-button left-button3">
+                <button class="left-button left-button3" onclick="markSelectedItem(null, 'UP')">
                 </button>
                 <button class="left-button left-button4">
                 </button>
@@ -40,7 +40,7 @@
                 </div>
                 </div>
                 <nav class="menu">
-                    <ul class="menu-items">
+                    <ul class="menu-items" id="item-select">
                         <li><a href="#apresentation">Apresentação</a></li>
                         <li><a href="#knowledge">Conhecimentos</a></li>
                         <li><a href="#projects">Projetos</a></li>
@@ -62,14 +62,23 @@
                         <h1>Conhecimentos</h1>
                         <div class="apresentation-card knowledge-bookcase">
                             <div class="knowledge-bookcase-item">
-                                <div class="avatar">
-                                </div>
+                                <img src="resources/images/MoedaHTML.png" alt="coinhtml" width="40" height="40">
                             </div>
-                            <div class="knowledge-bookcase-item">teste</div>
-                            <div class="knowledge-bookcase-item">teste</div>
-                            <div class="knowledge-bookcase-item">teste</div>
-                            <div class="knowledge-bookcase-item">teste</div>
-                            <div class="knowledge-bookcase-item">teste</div>
+                            <div class="knowledge-bookcase-item">
+                                <img src="resources/images/MoedaHTML.png" alt="coinhtml" width="40" height="40">
+                            </div>
+                            <div class="knowledge-bookcase-item">
+                                <img src="resources/images/MoedaHTML.png" alt="coinhtml" width="40" height="40">
+                            </div>
+                            <div class="knowledge-bookcase-item">
+                                <img src="resources/images/MoedaHTML.png" alt="coinhtml" width="40" height="40">
+                            </div>
+                            <div class="knowledge-bookcase-item">
+                                <img src="resources/images/MoedaHTML.png" alt="coinhtml" width="40" height="40">
+                            </div>
+                            <div class="knowledge-bookcase-item">
+                                <img src="resources/images/MoedaHTML.png" alt="coinhtml" width="40" height="40">
+                            </div>
                         </div>
                     </div>
                     <div id="projects">
@@ -81,7 +90,7 @@
                     <div id="contacts">
                         <h1>Contatos</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, exercitationem! Laborum ipsa, rem ad distinctio fuga minus perspiciatis hic natus molestias. Dolorem, impedit minima. Qui omnis cupiditate nulla dolorum recusandae.
+                            
                         </p>
                     </div>
                 </section>
