@@ -14,13 +14,11 @@ function adjustSelectItem(current, next) {
 
 const button_action = {
   DOWN: () => {
-    console.log('aki')
     if (select === 3) {
       console.log('aki');
       adjustSelectItem(select, 0);
       return;
     }
-    console.log('naoi');
     adjustSelectItem(select, select+=1);
   },
   UP: () => {
@@ -35,7 +33,7 @@ const button_action = {
 function markSelectedItem(event, button_press) {
   let i = 0;
   if (!event && button_press) {
-    button_action[button_press];
+    button_action[button_press]();
 
     return;
   } else if (!event && !button_press) {

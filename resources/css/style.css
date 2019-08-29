@@ -14,7 +14,7 @@ a {
     height: 100vh;
     width: 100vw;
     display: grid;
-    background: url("../images/fundo.png");
+    background: url("../images/fundo2.png");
     background-size: cover;
     background-position: center;
     grid-template-columns: 0.75fr 3.5fr 0.75fr;
@@ -238,6 +238,20 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.knowledge-bookcase-item:hover{
+    animation: roll 2s;
+}
+
+@keyframes roll {
+    to {
+        transform: rotateY(0deg);
+    }
+
+    from {
+        transform: rotateY(720deg);
+    }
 }
 
 #projects {
