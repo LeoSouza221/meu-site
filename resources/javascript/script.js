@@ -1,17 +1,6 @@
 let select = 0;
 let select_item = document.getElementById("item-select");
 let i = 0;
-
-function adjustSelectItem(current, next) {
-  select_item.children[current].classList.remove('selected-menu-item');
-  select = next;
-  select_item.children[select].classList.add('selected-menu-item');
-  // console.log(select_item.children[select].firstChild.href)
-  const right = document.getElementsByClassName('right-button');
-  right[0].getElementsByTagName("a").href = select_item.children[select].firstChild.href;
-  // console.log(right[0].getElementsByTagName("a").href);
-}
-
 const button_action = {
   DOWN: () => {
     if (select === 3) {
@@ -27,6 +16,30 @@ const button_action = {
     }
     adjustSelectItem(select, select-=1);
   },
+  ENTER: () => {
+    console.log('aki');
+  }
+};
+
+const correct_id = {
+  apresentation: '#apresentation',
+  knowledge: '#knowledge',
+  projects: '#projects',
+  contacts: '#contacts',
+};
+
+function adjustButton() {
+  const right = document.getElementsByClassName('right-buttons');
+  for (let c = 0; c < right[0].children.length; c++) {
+    right[0].children[c].children[0].href = Object.values(correct_id)[select];
+  };
+};
+
+function adjustSelectItem(current, next) {
+  select_item.children[current].classList.remove('selected-menu-item');
+  select = next;
+  select_item.children[select].classList.add('selected-menu-item');
+  adjustButton();
 };
 
 function markSelectedItem(event, button_press) {
@@ -43,7 +56,7 @@ function markSelectedItem(event, button_press) {
       adjustSelectItem(select, i);
     }
   }
-}
+};
 
 select_item.addEventListener("mouseover", function(event) {
   markSelectedItem(event);
@@ -56,6 +69,11 @@ let buttons_left = document.addEventListener("keydown", event => {
   }
   if (event.keyCode === 38) {
     button_action.UP();
+    return;
+  }
+  if (event.keyCode === 13) {
+    button_action.ENTER();
+    return
   }
 });
 

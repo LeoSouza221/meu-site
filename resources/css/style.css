@@ -14,7 +14,8 @@ a {
     height: 100vh;
     width: 100vw;
     display: grid;
-    background: url("../images/fundo2.png");
+    /* background: url("../images/fundo2.png"); */
+    background: #ebeaea;
     background-size: cover;
     background-position: center;
     grid-template-columns: 0.75fr 3.5fr 0.75fr;
@@ -31,14 +32,22 @@ a {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: rgb(103, 233, 103);
-    box-shadow: 0 0 5px white,
-        0 0 7px white,
-        0 0 8px rgb(103, 233, 103),
-        0 0 15px rgb(103, 233, 103),
-        0 0 20px rgb(103, 233, 103);
+    background: rgb(52, 230, 52);
+    box-shadow: 0 0 3px white,
+    0 0 7px white,
+    0 0 8px rgb(52, 230, 52),
+    0 0 15px rgb(52, 230, 52),
+    0 0 20px rgb(52, 230, 52);
     top: 50px;
     left: 90%;
+    animation: light_up 2s;
+}
+
+@keyframes light_up {
+    0% {
+        background: rgb(8, 73, 8);
+        box-shadow: none;
+    }
 }
 
 /*------------------------------------*/
@@ -56,15 +65,34 @@ a {
 main {
     height: calc(100% - 2px);
     width: calc(100% - 2px);
-    background: black;
+    background: rgb(36, 35, 35);
     margin: 2px;
-    border-radius: 8%;
+    border-radius: 5%;
     color: white;
     grid-area: content;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    bottom: 2px;
+    height: 28px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h4 {
+    width: 150px;
+    border: 2px solid white;
+    margin: 0;
+    border-radius: 50px;
 }
 
 .content {
-    background: cyan;
+    background: rgb(68, 236, 236);
     display: grid;
     grid-template-columns: 0.4fr 1.6fr;
     grid-template-rows: 15% 85%;
@@ -74,6 +102,26 @@ main {
     margin: 30px;
     height: calc(100% - 60px);
     width: calc(100% - 60px);
+    box-shadow: inset -1px -1px 2px 3px black;
+}
+
+.opening {
+    background: black;
+    height: calc(100% - 60px);
+    width: calc(100% - 60px);
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: teste 3s;
+}
+
+.opening-circle {
+    height: 20px;
+    width: 20px;
+    background: white;
+    border-radius: 50%;
 }
 
 .top-content {
@@ -89,7 +137,6 @@ main {
 
 .language-selection {
     margin: 5px;
-
 }
 
 .avatar {
@@ -110,6 +157,7 @@ main {
     overflow-y: hidden;
     height: 100%;
     width: 100%;
+    position: relative;
 }
 
 .slides {
@@ -117,9 +165,8 @@ main {
 }
 
 .menu {
-    background: yellow;
     grid-area: menu;
-    height: 100%;
+    height: 90%;
     width: 100%;
     
 }
@@ -171,6 +218,14 @@ ul {
 
 /*------------------------------------*/
 
+.me-position {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*------------------------------------*/
+
 #apresentation {
     height: 100%;
     width: 100%;
@@ -189,7 +244,7 @@ ul {
     margin: 5px;
     position: absolute;
     height: 80%;
-    width: 100%;
+    width: 90%;
     bottom: 0;
 }
 
@@ -212,7 +267,6 @@ ul {
     border-left: 13px solid transparent;
   }
 /*------------------------------------*/
-
 
 #knowledge {
     height: 100%;
@@ -290,12 +344,10 @@ ul {
     top: 0;
 }
 
-#contacts p {
-    margin: 5px;
-    position: absolute;
-    height: 80%;
-    width: 100%;
-    bottom: 0;
+.my-contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 /*------------------------------------*/
@@ -317,10 +369,6 @@ button {
     width: 80%;
     height: 160px;
     position: relative;
-    background: rgb(0, 0, 0, 0.8);
-    border-radius: 50%;
-    border: 3px solid black;
-    box-shadow: inset 0 0 7px #acabab;
 }
 
 .left-button {
@@ -329,7 +377,7 @@ button {
     background: rgb(0, 0, 0, 0.8);
     border-radius: 15%;
     color: white;
-    /* border: 5px solid; */
+    box-shadow: 1px 1px 0px 1px black;
  }
 
 .left-button1 {
@@ -371,26 +419,12 @@ button {
     position: relative;
 }
 
-.button-background {
-    position: absolute;
-    height: 35%;
-    width: 90%;
-    background: rgb(0, 0, 0, 0.8);
-    border-radius: 40%;
-    border: 3px solid black;
-    box-shadow: inset 0 0 7px #acabab;
-    top: 30%;
-    transform: rotate(328deg);
-    left: 6%;
-}
-
 .right-button {
     border-radius: 50%;
-    /* box-shadow: 5px 5px 10px black; */
+    box-shadow: 1px 1px 0px 1px black;
     height: 40px;
     width: 40px;
     color: white;
-    /* border: 5px solid; */
  }
 
 .right-button1 {
@@ -401,7 +435,7 @@ button {
 }
 
 .right-button2 {
-    background: rgb(207, 207, 66);
+    background: red;
     position: absolute;
     top: 30px;
     right: 35px;
