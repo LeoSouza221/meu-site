@@ -12,34 +12,59 @@
   0 0 8px black,
   0 0 15px black,
   0 0 20px black;
-  animation: animation_screen 5s forwards;
-  animation-delay: 3s;
+  mix-blend-mode: multiply;
+  animation: animation_screen 1s forwards;
+  animation-delay: 10s;
+}
+
+.logo_opening {
+  position: absolute;
+  color: white;
+  text-align: center;
+}
+
+.logo_opening h2 {
+  color: white;
+  width: 200px;
+  border: 2px solid white;
+  margin: 0;
+  border-radius: 50px;
+  animation: animation_screen 2s reverse;
+}
+
+.logo_opening h4 {
+  width: 200px;
+  margin: 0;
+  opacity: 0;
+  animation: animation_screen 2s reverse forwards;
+  animation-delay: 2s;
+}
+
+.circle_opening {
+  background:  white;
+  border-radius: 50%;
+  animation: circle_expand 6s forwards;
+  animation-delay: 5s;
+}
+
+@keyframes circle_expand {
+  from {
+    height: 0;
+    width: 0;
+  }
+  to {
+    height: 50vw;
+    width: 80vw;
+    display: hidden;
+  }
 }
 
 @keyframes animation_screen {
   from {
-    opacity: 1;    
+    opacity: 1; 
   }
   to {
     opacity: 0;
     z-index: -1;
   }
 }
-
-/* https://codepen.io/css-support/pen/bspdK 
-https://codepen.io/genevievecm/pen/gXxYpY
-*/
-
-.opening h1 { 
-	width: 16.5em; 
-	width: 21ch;
-	margin: 2em 1em;
-	white-space: nowrap;
-	overflow: hidden;
-	animation: typing 2s steps(9, end),
-	  blink-caret .5s step-end infinite alternate;
-}
-
-
-@keyframes typing { from { width: 0; } }
-@keyframes blink-caret { 50% { border-color: transparent; } }

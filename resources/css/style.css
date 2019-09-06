@@ -15,6 +15,7 @@ a {
     width: 100vw;
     display: grid;
     /* background: url("../images/fundo2.png"); */
+    /* background: #ebeaea; */
     background: #ebeaea;
     background-size: cover;
     background-position: center;
@@ -92,7 +93,7 @@ main {
 }
 
 .content {
-    background: rgb(68, 236, 236);
+    background: linear-gradient(rgb(126, 247, 247), rgb(192, 240, 240));
     display: grid;
     grid-template-columns: 0.4fr 1.6fr;
     grid-template-rows: 15% 85%;
@@ -158,7 +159,7 @@ main {
     grid-area: menu;
     height: 90%;
     width: 100%;
-    
+    transition: color 1s cubic-bezier();
 }
 
 .menu-items {
@@ -174,7 +175,8 @@ main {
 
 ul {
     list-style-type: none;
-    color: black;
+    color: white;
+    text-shadow: 2px 2px black;
     display: block;
 }
 
@@ -196,13 +198,9 @@ ul {
 @keyframes menu {
     to {
         color: white !important;
-        background: rgb(175, 172, 172);
-        border-radius: 5px;
     }
     from {
         color: black;
-        background: none;
-        border-radius: 5px;
     }
 }
 
@@ -229,6 +227,7 @@ ul {
     height: 10%;
     width: 100%;
     top: 0;
+    text-shadow: 2px 2px black;
 }
 
 .apresentation-card {
@@ -239,24 +238,52 @@ ul {
     bottom: 0;
 }
 
-.apresentation-text {
-    position: relative;
-    margin: 0 20px;
-    background: rgb(0, 0, 0, 0.8);
-    padding: 5px;
-    border-radius: 10px;
+.card-flex {
+    height: 80px;
+    display: flex;
+    flex-direction:column;
+    justify-content:flex-start;
 }
-.apresentation-text:before {
-    content: "";
-    position: absolute;
-    right: 15%;
-    bottom: -28%;
-    width: 0;
-    height: 0;
-    border-top: 26px solid rgb(0, 0, 0, 0.8);
-    border-right: 13px solid transparent;
-    border-left: 13px solid transparent;
-  }
+
+.apresentation-text {
+    background: white;
+    padding: 8px;
+    border-radius: 10px;
+    opacity: 0;
+    border: solid 1px black;
+    box-shadow: inset 0 0 3px 3px black;
+    color: black;
+    overflow:hidden;
+    animation: ted 5s forwards;
+    animation-delay: 6s
+}
+
+.apresentation-text p {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes ted {
+    from {
+        flex: 0;
+    }
+    to { 
+        opacity: 1;
+        flex: 1;
+    }
+}
+
+/* .tri-right.btm-right:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+    left: auto;
+	right: 7%;
+	top: 89px;
+	border: 12px solid;
+	border-color: rgb(0, 0, 0, 0.8) rgb(0, 0, 0, 0.8) transparent transparent;
+} */
 /*------------------------------------*/
 
 #knowledge {
@@ -271,6 +298,7 @@ ul {
     height: 20%;
     width: 100%;
     top: 0;
+    text-shadow: 2px 2px black;
 }
 
 .knowledge-bookcase {
@@ -284,20 +312,26 @@ ul {
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 2;
 }
 
 .tooltips {
     position: absolute;
-    top: 50%;
+    top: 40%;
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
+    text-shadow: 2px 2px black;
 }
 
 .knowledge-bookcase-item img:hover{
     animation: roll 2s;
 }
 
-
+.knowledge-bookcase-item img:hover ~ .tooltips {
+    top: 0;
+    opacity: 1;
+    transition: top 1s ease-in;
+}
 
 @keyframes roll {
     to {
@@ -321,6 +355,7 @@ ul {
     height: 20%;
     width: 100%;
     top: 0;
+    text-shadow: 2px 2px black;
 }
 
 #projects p {
@@ -343,6 +378,7 @@ ul {
     height: 20%;
     width: 100%;
     top: 0;
+    text-shadow: 2px 2px black;
 }
 
 .my-contacts {
