@@ -12,12 +12,12 @@
   0 0 8px black,
   0 0 15px black,
   0 0 20px black;
-  mix-blend-mode: multiply;
+  /* mix-blend-mode: multiply; */
   animation: animation_screen 1s forwards;
   animation-delay: 10s;
 }
 
-.logo_opening {
+/* .logo_opening {
   position: absolute;
   color: white;
   text-align: center;
@@ -38,23 +38,22 @@
   opacity: 0;
   animation: animation_screen 2s reverse forwards;
   animation-delay: 2s;
-}
+} */
 
 .circle_opening {
-  background:  white;
-  border-radius: 50%;
-  animation: circle_expand 6s forwards;
-  animation-delay: 5s;
+  background-image:  white;
+  clip-path: circle(50% at 50% 50%);
+  height: 100vh;  
+  /* animation: circle_expand 6s forwards;
+  animation-delay: 5s; */
 }
 
 @keyframes circle_expand {
   from {
-    height: 0;
-    width: 0;
+    height: 0vh;
   }
   to {
-    height: 50vw;
-    width: 80vw;
+    height: 100vh;
     display: hidden;
   }
 }
