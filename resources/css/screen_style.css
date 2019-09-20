@@ -1,7 +1,7 @@
 .opening {
   height: calc(100% - 60px);
   width: calc(100% - 60px);
-  z-index: 10;
+  z-index: 12;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -12,12 +12,12 @@
   0 0 8px black,
   0 0 15px black,
   0 0 20px black;
-  /* mix-blend-mode: multiply; */
+  mix-blend-mode: multiply;
   animation: animation_screen 1s forwards;
   animation-delay: 10s;
 }
 
-/* .logo_opening {
+.logo_opening {
   position: absolute;
   color: white;
   text-align: center;
@@ -38,7 +38,7 @@
   opacity: 0;
   animation: animation_screen 2s reverse forwards;
   animation-delay: 2s;
-} */
+}
 
 .circle_opening {
   background-image:  white;
