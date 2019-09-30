@@ -51,6 +51,13 @@ function markSelectedItem(event, button_press) {
   } else if (!event && !button_press) {
     select_item.children[select].classList.add('selected-menu-item');
     return;
+  } else if (event.target = 'a') {
+    for (i; i < select_item.children.length; i++) {
+      if (event.target == select_item.children[i].firstChild) {
+        adjustSelectItem(select, i);
+      }
+    }
+    return;
   }
   for (i; i < select_item.children.length; i++) {
     if (event.target == select_item.children[i]) {

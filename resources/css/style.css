@@ -67,7 +67,6 @@ a {
 /*------------------------------------*/
 
 main {
-    z-index: 100;
     height: calc(100% - 2px);
     width: calc(100% - 2px);
     background: rgb(36, 35, 35);
@@ -97,10 +96,10 @@ main {
 }
 
 .content {
+    display: grid;
     background:  url("../images/FundoTela.png"), linear-gradient(rgb(126, 247, 247), rgb(192, 240, 240));
     background-position: center;
     background-size: cover;
-    display: grid;
     grid-template-columns: 0.4fr 1.6fr;
     grid-template-rows: 15% 85%;
     grid-template-areas: 
