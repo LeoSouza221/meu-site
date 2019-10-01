@@ -44,7 +44,9 @@
                     </div>
                 </div>
                 <div class="top-content">
-                    <button class="avatar" onclick="openMenu()"></button>
+                    <div>
+                        <button class="button-menu menu-open" onclick="openMenu()">MENU</button>
+                    </div>
                     <div class="count-skills">
                         <img src="resources/images/Moeda.png" alt="coin" width="20" height="20"> X
                         <span class="skills-amount">0</span>
@@ -67,7 +69,7 @@
                         <li><a href="#projects">Projetos</a></li>
                         <li><a href="#contacts">Contatos</a></li>
                     </ul>
-                    <button class="close" onclick="closeMenu()">Fechar</button>
+                    <button class="button-menu menu-close" onclick="closeMenu()">FECHAR</button>
                 </nav>
                 <section class="my-apresentation slides">
                     <div id="apresentation">
@@ -99,7 +101,7 @@
                                 <img src="resources/images/MoedaJS.png" alt="coinjs" width="50" height="50">
                                 <span class="tooltips">JavaScript</span>
                             </div>
-                            <div class="teste"></div> <div class="teste"></div> <div class="teste"></div>
+                            <div class="blocks"></div> <div class="blocks"></div> <div class="blocks"></div>
                             <div class="knowledge-bookcase-item">
                                 <img src="resources/images/MoedaVue.png" alt="coinvue" width="50" height="50">
                                 <span class="tooltips">VueJS</span>
@@ -115,15 +117,27 @@
                     <div id="contacts">
                         <h1>Contatos</h1>
                         <div class="apresentation-card my-contacts">
-                            <a href="https://github.com/LeoSouza221" target="_blank">
-                                <img src="resources/images/MoedaCSS.png" alt="coincss" width="60" height="60">
-                            </a>
-                            <a href="https://www.linkedin.com/in/leonardo-de-souza-a75557156/" target="_blank">
-                                <img src="resources/images/MoedaJS.png" alt="coinjs" width="60" height="60">
-                            </a>
-                            <a href="https://www.facebook.com/leonardo.felipe.98096" target="_blank"">
-                                <img src="resources/images/MoedaHTML.png" alt="coinhtml" width="60" height="60">
-                            </a>
+                            <div class="contact-box">
+                                <div class="contact-box-back">
+                                    <!-- <a href="https://github.com/LeoSouza221" target="_blank">
+                                        <img src="resources/images/github.png" alt="coincss" width="30" height="30">
+                                    </a> -->
+                                </div>
+                            </div>
+                            <div class="contact-box">
+                                <div class="contact-box-back">
+                                    <a href="https://www.linkedin.com/in/leonardo-de-souza-a75557156/" target="_blank">
+                                        <img src="resources/images/linkedin.png" alt="coincss" width="30" height="30">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="contact-box">
+                                <div class="contact-box-back">
+                                    <a href="https://www.facebook.com/leonardo.felipe.98096" target="_blank"">
+                                        <img src="resources/images/facebook.png" alt="coincss" width="30" height="30">
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

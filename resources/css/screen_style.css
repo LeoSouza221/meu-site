@@ -1,6 +1,6 @@
 .opening {
-  height: calc(100% - 60px);
-  width: calc(100% - 60px);
+  height: 100%;
+  width: 100%;
   z-index: 12;
   position: absolute;
   display: flex;
