@@ -42,18 +42,20 @@
 
 .circle_opening {
   background-image:  white;
-  clip-path: circle(50% at 50% 50%);
-  height: 100vh;  
-  /* animation: circle_expand 6s forwards;
-  animation-delay: 5s; */
+  height: 0vh;
+  width: 0vh;
+  animation: circle_expand 6s forwards;
+  animation-delay: 5s;
 }
 
 @keyframes circle_expand {
   from {
     height: 0vh;
+    width: 0vh;
   }
   to {
     height: 100vh;
+    width: 100vh;
     display: hidden;
   }
 }

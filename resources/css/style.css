@@ -234,6 +234,12 @@ ul {
     z-index: 2;
 }
 
+@media only screen and (min-height: 500px) {
+    me-position {
+        bottom: 10%;
+    }   
+}
+
 /*------------------------------------*/
 
 #apresentation {
