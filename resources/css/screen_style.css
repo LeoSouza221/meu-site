@@ -54,9 +54,8 @@
     width: 0vh;
   }
   to {
-    height: 100vh;
-    width: 100vh;
-    display: hidden;
+    height: 100%;
+    width: 100%;
   }
 }
 
