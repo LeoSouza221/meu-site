@@ -1,7 +1,6 @@
 let select = 0;
 let select_item = document.getElementById("item-select");
 let i = 0;
-let teste = 'VUEJS'
 const button_action = {
   DOWN: () => {
     if (select === 3) {
